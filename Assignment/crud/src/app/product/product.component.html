@@ -1,0 +1,60 @@
+<a routerLink = "/"> < back </a>
+
+<h2>Add New USER</h2>
+
+<form id = "formNewProduct" name = "formNewProduct" #productData ="ngForm" (ngSubmit) = "addNewProduct(productData.value)">
+  <label>First Name: </label>
+  <input type = "text" name="First_Name" id="First_Name" placeholder="First Name" ngModel maxlength="35" required/><br>
+  
+  <label>Last Name: </label>
+  <input type = "text" name="Last_Name" id="Last_Name" placeholder="Last Name" ngModel maxlength="50" required/><br><br>
+  
+  <label for="Nationality">Nationality</label>
+  <select class="form-control" id="Nationality" maxlength="2" ngModel required>
+    <option *ngFor="let nat of nationalitys" [value]="nat">{{nat}}</option>
+  </select><br>
+
+  <label>Identity No: </label>
+  <input type = "text" name="Identity_No" id="Identity_No" placeholder="Identity No" ngModel required><br>
+  
+  <label>Birthdate: </label>
+  <input type = "text" name="Birthdate" id="Birthdate" placeholder="Birthdate" ngModel maxlength="8" required><br>
+  
+  <label>Contact No: </label>
+  <input type = "text" name="Contact_No" id="Contact_No" placeholder="Contact No" ngModel maxlength="15" required><br>
+  
+  <label>Address: </label>
+  <input type = "text" name="Address" id="Address" placeholder="Address" ngModel maxlength="100" required><br>
+  
+  <label>City: </label>
+  <input type = "text" name="City" id="City" placeholder="City" ngModel maxlength="35" required><br>
+  
+  <label>State: </label>
+  <input type = "text" name="State" id="State" placeholder="State" ngModel maxlength="35" required><br>
+  
+  <label>Postcode: </label>
+  <input type = "text" name="Post_Code" id="Post_Code" placeholder="Postcode" ngModel maxlength="15" required><br>
+  <br>
+
+  <label for="Country">Country</label>
+  <select class="form-control" id="Country" required>
+    <option *ngFor="let c of countries" [ngValue]="c">{{c}}</option>
+  </select><br>
+  
+  <label>Email: </label>
+  <input type = "email" name="Email" id="Email" placeholder="Email" ngModel maxlength="100" required><br>
+  
+  <label>Bank Account: </label>
+  <input type = "text" name="Bank_Account" id="Bank_Account" placeholder="Bank Account" ngModel maxlength="100" ><br>
+  
+  <label>Issue Bank: </label>
+  <input type = "text" name="Issue_Bank" id="Issue_Bank" placeholder="Issue Bank" ngModel maxlength="100" ><br>
+  
+  <label>Attachment: </label>
+  <input type = "text" name="Attachment" id="Attachment" placeholder="Attachment" ngModel required><br><br>
+ 
+  <button type = "submit" value = "Add Product" ng-disabled="formNewProduct.$invalid">Submit</button>
+
+</form> 
+<br>
+<h3 *ngIf = "isAdded">{{confirmationString}}</h3>

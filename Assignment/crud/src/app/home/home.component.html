@@ -1,0 +1,44 @@
+<a routerLink = '/product'> Create</a>
+
+<h1>User</h1>
+
+<table>
+  <th>ID</th>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Nationality</th>
+  <th>Identity No</th>
+  <th>Birthdate</th>
+  <th>Contact No</th>
+  <th>Address</th>
+  <th>City</th>
+  <th>State</th>
+  <th>Postcode</th>
+  <th>Country</th>
+  <th>Email</th>
+  <th>Bank Account</th>
+  <th>Issue Bank</th>
+  <th>Attachment</th>
+  <th>DELETE</th>
+  <th>EDIT</th>
+  <tr *ngFor = "let product of products">
+    <td>{{product.id}}</td>
+    <td>{{product.First_Name}}</td>
+    <td>{{product.Last_Name}}</td>
+    <td>{{product.Nationality}}</td>
+    <td>{{product.Identity_No}}</td>
+    <td>{{product.Birthdate}}</td>
+    <td>{{product.Contact_No}}</td>
+    <td>{{product.Address}}</td>
+    <td>{{product.City}}</td>
+    <td>{{product.State}}</td>
+    <td>{{product.Post_Code}}</td>
+    <td>{{product.Country}}</td>
+    <td>{{product.Email}}</td>
+    <td>{{product.Bank_Account}}</td>
+    <td>{{product.Issue_Bank}}</td>
+    <td>{{product.Attachment}}</td>
+    <td (click) = "deleteProduct(product.id)"><a>DELETE</a></td>
+    <td [routerLink] = "['/updateProduct', product.id]"><a>UPDATE</a></td>
+  </tr>
+</table>

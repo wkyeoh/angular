@@ -1,0 +1,21 @@
+<h2>UPDATE Product</h2>
+
+<form id = "formNewProduct" name = "formNewProduct" #productData = "ngForm" (ngSubmit) = "updateProduct(productData.value)">
+  <label>First Name: </label><input type = "text" name="First_Name" id="First_Name" placeholder="First Name" [(ngModel)] = "data.First_Name" ngModel><br>
+  <label>Last Name: </label><input type = "text" name="Last_Name" id="Last_Name" placeholder="Last Name" [(ngModel)] = "data.Last_Name" ngModel><br>
+  <label>Nationality: </label><input type = "text" name="Nationality" id="Nationality" placeholder="Nationality" [(ngModel)] = "data.Nationality" ngModel><br>
+  <label>Identity No: </label><input type = "text" name="Identity_No" id="Identity_No" placeholder="Identity No" [(ngModel)] = "data.Identity_No" ngModel><br>
+  <label>Birthdate: </label><input type = "text" name="Birthdate" id="Birthdate" placeholder="Birthdate" [(ngModel)] = "data.Birthdate" ngModel><br>
+  <label>Contact No: </label><input type = "text" name="Contact_No" id="Contact_No" placeholder="Contact No" [(ngModel)] = "data.Contact_No" ngModel><br>
+  <label>Address: </label><input type = "text" name="Address" id="Address" placeholder="Address" [(ngModel)] = "data.Address" ngModel><br>
+  <label>City: </label><input type = "text" name="City" id="City" placeholder="City" [(ngModel)] = "data.City" ngModel><br>
+  <label>State: </label><input type = "text" name="State" id="State" placeholder="State" [(ngModel)] = "data.State"  ngModel><br>
+  <label>Postcode: </label><input type = "text" name="Post_Code" id="Post_Code" placeholder="Postcode" [(ngModel)] = "data.Post_Code" ngModel><br>
+  <label>Country: </label><input type = "text" name="Country" id="Country" placeholder="Country" [(ngModel)] = "data.Country" ngModel><br>
+  <label>Email: </label><input type = "text" name="Email" id="Email" placeholder="Email" [(ngModel)] = "data.Email" ngModel><br>
+  <label>Bank Account: </label><input type = "text" name="Bank_Account" id="Bank_Account" placeholder="Bank Account" [(ngModel)] = "data.Bank_Account" ngModel><br>
+  <label>Issue Bank: </label><input type = "text" name="Issue_Bank" id="Issue_Bank" placeholder="Issue_Bank" [(ngModel)] = "data.Issue_Bank" ngModel><br>
+  <label>Attachment: </label><input type = "text" name="Attachment" id="Attachment" placeholder="Attachment" [(ngModel)] = "data.Attachment" ngModel><br><br>
+  <input type = "submit" value = "Update Product">
+
+</form> 
